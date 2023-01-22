@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>32744402409-4q3qhjdj8gikvk43mg7vamv721f0fft7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.32744402409-4q3qhjdj8gikvk43mg7vamv721f0fft7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDps84-LSel5jmWIg26Aw97vJuyf9Xq3lE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>32744402409</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.angelr.EasyTrader</string>
+	<key>PROJECT_ID</key>
+	<string>easytrader-4134a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>easytrader-4134a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:32744402409:ios:1d2e6bad6fdd566c786f78</string>
+</dict>
+</plist>

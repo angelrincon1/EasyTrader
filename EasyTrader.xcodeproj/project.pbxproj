@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3907B14A2973608800B8A0A8 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3907B1492973608800B8A0A8 /* Double.swift */; };
+		3907B14C297461D700B8A0A8 /* ModifyCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3907B14B297461D700B8A0A8 /* ModifyCoinViewModel.swift */; };
+		39363F6529495C3500EEDF81 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39363F6429495C3500EEDF81 /* UserService.swift */; };
+		39363F6729495E5900EEDF81 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39363F6629495E5900EEDF81 /* UserModel.swift */; };
+		39426CA629245D590099A830 /* SellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39426CA529245D590099A830 /* SellView.swift */; };
+		396A3C9E291B210B00152FA0 /* EasyTraderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A3C9D291B210B00152FA0 /* EasyTraderApp.swift */; };
+		396A3CA0291B210B00152FA0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A3C9F291B210B00152FA0 /* ContentView.swift */; };
+		396A3CA2291B210C00152FA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 396A3CA1291B210C00152FA0 /* Assets.xcassets */; };
+		396A3CA5291B210C00152FA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 396A3CA4291B210C00152FA0 /* Preview Assets.xcassets */; };
+		396A3CAD291B254500152FA0 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A3CAC291B254500152FA0 /* LogInView.swift */; };
+		396A3CAF291B3C3E00152FA0 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A3CAE291B3C3E00152FA0 /* RegisterView.swift */; };
+		397AE15829512FEA00ACFD23 /* OwnedCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397AE15729512FEA00ACFD23 /* OwnedCoinsView.swift */; };
+		397AE15A295145A400ACFD23 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397AE159295145A400ACFD23 /* SearchBar.swift */; };
+		397AE15C2951490200ACFD23 /* CoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397AE15B2951490200ACFD23 /* CoinService.swift */; };
+		397AE1642952951B00ACFD23 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397AE1632952951B00ACFD23 /* CoinModel.swift */; };
+		397B15682979AFC800E58DAE /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397B15672979AFC800E58DAE /* PortfolioView.swift */; };
+		397B156A2979B1F400E58DAE /* PortfolioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397B15692979B1F400E58DAE /* PortfolioData.swift */; };
+		397B156C2979B56D00E58DAE /* PortfolioItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397B156B2979B56D00E58DAE /* PortfolioItemRowView.swift */; };
+		397B1575297B100800E58DAE /* EmptyPortfolioRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397B1574297B100800E58DAE /* EmptyPortfolioRowView.swift */; };
+		397E75A9296B523A005EB4DA /* TransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E75A8296B523A005EB4DA /* TransactionRowView.swift */; };
+		397E75AB296B57F2005EB4DA /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397E75AA296B57F2005EB4DA /* TransactionsView.swift */; };
+		39B770D529214C6400DAB982 /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B770D429214C6400DAB982 /* BuyView.swift */; };
+		39B770D72921BADF00DAB982 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B770D62921BADF00DAB982 /* DashboardView.swift */; };
+		39B9FB742948075C008B583E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B9FB732948075C008B583E /* MainView.swift */; };
+		39CCD2F1293B9839004E8F52 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CCD2F0293B9839004E8F52 /* MainTabView.swift */; };
+		39CCD2F3293BB787004E8F52 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CCD2F2293BB787004E8F52 /* CoinRowView.swift */; };
+		39CCD2F6293BC462004E8F52 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CCD2F5293BC462004E8F52 /* ProfileView.swift */; };
+		39CCD2FB293CE111004E8F52 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CCD2FA293CE111004E8F52 /* SideMenuView.swift */; };
+		39CCD2FD293CE125004E8F52 /* SideMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CCD2FC293CE125004E8F52 /* SideMenuRowView.swift */; };
+		39CCD2FF293CE137004E8F52 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CCD2FE293CE137004E8F52 /* SideMenuViewModel.swift */; };
+		39CCD305293CEB0E004E8F52 /* StackedContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CCD304293CEB0E004E8F52 /* StackedContentView.swift */; };
+		39CCD30B29400A7F004E8F52 /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CCD30A29400A7F004E8F52 /* CustomInputField.swift */; };
+		39CCD30D29400DD1004E8F52 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CCD30C29400DD1004E8F52 /* LogoView.swift */; };
+		39D5F5CE292AF42C0021150B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39D5F5CD292AF42C0021150B /* GoogleService-Info.plist */; };
+		39D5F5D0292B19740021150B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D5F5CF292B19740021150B /* AuthViewModel.swift */; };
+		39DD51522969C22D00B5CC5B /* OwnedCoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD51512969C22D00B5CC5B /* OwnedCoinModel.swift */; };
+		39DD51542969E12E00B5CC5B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD51532969E12E00B5CC5B /* UserViewModel.swift */; };
+		39DD5156296A345700B5CC5B /* OwnedCoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DD5155296A345700B5CC5B /* OwnedCoinRowView.swift */; };
+		39E93F2D295A2DB6008B9949 /* ModifySelectedStockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E93F2C295A2DB6008B9949 /* ModifySelectedStockView.swift */; };
+		9AD6EAAD9C68352EB709B5FC /* Pods_EasyTrader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940B138B592E607A0BA85D5A /* Pods_EasyTrader.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3907B1492973608800B8A0A8 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		3907B14B297461D700B8A0A8 /* ModifyCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyCoinViewModel.swift; sourceTree = "<group>"; };
+		39363F6429495C3500EEDF81 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		39363F6629495E5900EEDF81 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		39426CA529245D590099A830 /* SellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellView.swift; sourceTree = "<group>"; };
+		396A3C9A291B210B00152FA0 /* EasyTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		396A3C9D291B210B00152FA0 /* EasyTraderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyTraderApp.swift; sourceTree = "<group>"; };
+		396A3C9F291B210B00152FA0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		396A3CA1291B210C00152FA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		396A3CA4291B210C00152FA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		396A3CAC291B254500152FA0 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		396A3CAE291B3C3E00152FA0 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		397AE15729512FEA00ACFD23 /* OwnedCoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnedCoinsView.swift; sourceTree = "<group>"; };
+		397AE159295145A400ACFD23 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		397AE15B2951490200ACFD23 /* CoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinService.swift; sourceTree = "<group>"; };
+		397AE1632952951B00ACFD23 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		397B15672979AFC800E58DAE /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
+		397B15692979B1F400E58DAE /* PortfolioData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioData.swift; sourceTree = "<group>"; };
+		397B156B2979B56D00E58DAE /* PortfolioItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioItemRowView.swift; sourceTree = "<group>"; };
+		397B1574297B100800E58DAE /* EmptyPortfolioRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPortfolioRowView.swift; sourceTree = "<group>"; };
+		397E75A8296B523A005EB4DA /* TransactionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRowView.swift; sourceTree = "<group>"; };
+		397E75AA296B57F2005EB4DA /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		39B770D429214C6400DAB982 /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
+		39B770D62921BADF00DAB982 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		39B9FB732948075C008B583E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		39CCD2F0293B9839004E8F52 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		39CCD2F2293BB787004E8F52 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
+		39CCD2F5293BC462004E8F52 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		39CCD2FA293CE111004E8F52 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		39CCD2FC293CE125004E8F52 /* SideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowView.swift; sourceTree = "<group>"; };
+		39CCD2FE293CE137004E8F52 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
+		39CCD304293CEB0E004E8F52 /* StackedContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedContentView.swift; sourceTree = "<group>"; };
+		39CCD30A29400A7F004E8F52 /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
+		39CCD30C29400DD1004E8F52 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		39D5F5CD292AF42C0021150B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		39D5F5CF292B19740021150B /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		39DD51512969C22D00B5CC5B /* OwnedCoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnedCoinModel.swift; sourceTree = "<group>"; };
+		39DD51532969E12E00B5CC5B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		39DD5155296A345700B5CC5B /* OwnedCoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnedCoinRowView.swift; sourceTree = "<group>"; };
+		39E93F2C295A2DB6008B9949 /* ModifySelectedStockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifySelectedStockView.swift; sourceTree = "<group>"; };
+		88915881BCE5A55608C36305 /* Pods-EasyTrader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTrader.release.xcconfig"; path = "Target Support Files/Pods-EasyTrader/Pods-EasyTrader.release.xcconfig"; sourceTree = "<group>"; };
+		940B138B592E607A0BA85D5A /* Pods_EasyTrader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyTrader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C965DA8737E2C6B5F2CFE06E /* Pods-EasyTrader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTrader.debug.xcconfig"; path = "Target Support Files/Pods-EasyTrader/Pods-EasyTrader.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		396A3C97291B210B00152FA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AD6EAAD9C68352EB709B5FC /* Pods_EasyTrader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39426CA7292465530099A830 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				39363F6429495C3500EEDF81 /* UserService.swift */,
+				39363F6629495E5900EEDF81 /* UserModel.swift */,
+				39DD51512969C22D00B5CC5B /* OwnedCoinModel.swift */,
+				397AE1632952951B00ACFD23 /* CoinModel.swift */,
+				397AE15B2951490200ACFD23 /* CoinService.swift */,
+				397B15692979B1F400E58DAE /* PortfolioData.swift */,
+				3907B1492973608800B8A0A8 /* Double.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		396A3C91291B210B00152FA0 = {
+			isa = PBXGroup;
+			children = (
+				396A3C9C291B210B00152FA0 /* EasyTrader */,
+				396A3C9B291B210B00152FA0 /* Products */,
+				40413D786D034116F3AFCC48 /* Pods */,
+				78A40C25FA4E0A70DEFA55FF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		396A3C9B291B210B00152FA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				396A3C9A291B210B00152FA0 /* EasyTrader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		396A3C9C291B210B00152FA0 /* EasyTrader */ = {
+			isa = PBXGroup;
+			children = (
+				396A3C9D291B210B00152FA0 /* EasyTraderApp.swift */,
+				39426CA7292465530099A830 /* Models */,
+				396A3CAB291B24C100152FA0 /* Views */,
+				39CCD309293EB439004E8F52 /* ViewModels */,
+				39D5F5CD292AF42C0021150B /* GoogleService-Info.plist */,
+				396A3CA1291B210C00152FA0 /* Assets.xcassets */,
+				396A3CA3291B210C00152FA0 /* Preview Content */,
+			);
+			path = EasyTrader;
+			sourceTree = "<group>";
+		};
+		396A3CA3291B210C00152FA0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				396A3CA4291B210C00152FA0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		396A3CAB291B24C100152FA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				396A3C9F291B210B00152FA0 /* ContentView.swift */,
+				39CCD30C29400DD1004E8F52 /* LogoView.swift */,
+				39CCD30A29400A7F004E8F52 /* CustomInputField.swift */,
+				397AE159295145A400ACFD23 /* SearchBar.swift */,
+				396A3CAC291B254500152FA0 /* LogInView.swift */,
+				396A3CAE291B3C3E00152FA0 /* RegisterView.swift */,
+				39B9FB732948075C008B583E /* MainView.swift */,
+				39CCD2FA293CE111004E8F52 /* SideMenuView.swift */,
+				39CCD2FC293CE125004E8F52 /* SideMenuRowView.swift */,
+				39B770D62921BADF00DAB982 /* DashboardView.swift */,
+				397AE15729512FEA00ACFD23 /* OwnedCoinsView.swift */,
+				397B15672979AFC800E58DAE /* PortfolioView.swift */,
+				39B770D429214C6400DAB982 /* BuyView.swift */,
+				39426CA529245D590099A830 /* SellView.swift */,
+				39E93F2C295A2DB6008B9949 /* ModifySelectedStockView.swift */,
+				397E75AA296B57F2005EB4DA /* TransactionsView.swift */,
+				39CCD2F0293B9839004E8F52 /* MainTabView.swift */,
+				39CCD304293CEB0E004E8F52 /* StackedContentView.swift */,
+				39CCD2F5293BC462004E8F52 /* ProfileView.swift */,
+				39CCD2F2293BB787004E8F52 /* CoinRowView.swift */,
+				39DD5155296A345700B5CC5B /* OwnedCoinRowView.swift */,
+				397B156B2979B56D00E58DAE /* PortfolioItemRowView.swift */,
+				397B1574297B100800E58DAE /* EmptyPortfolioRowView.swift */,
+				397E75A8296B523A005EB4DA /* TransactionRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		39CCD309293EB439004E8F52 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				39DD51532969E12E00B5CC5B /* UserViewModel.swift */,
+				39CCD2FE293CE137004E8F52 /* SideMenuViewModel.swift */,
+				39D5F5CF292B19740021150B /* AuthViewModel.swift */,
+				3907B14B297461D700B8A0A8 /* ModifyCoinViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		40413D786D034116F3AFCC48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C965DA8737E2C6B5F2CFE06E /* Pods-EasyTrader.debug.xcconfig */,
+				88915881BCE5A55608C36305 /* Pods-EasyTrader.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		78A40C25FA4E0A70DEFA55FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				940B138B592E607A0BA85D5A /* Pods_EasyTrader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		396A3C99291B210B00152FA0 /* EasyTrader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 396A3CA8291B210C00152FA0 /* Build configuration list for PBXNativeTarget "EasyTrader" */;
+			buildPhases = (
+				E996DC2F0727F778A4070E75 /* [CP] Check Pods Manifest.lock */,
+				396A3C96291B210B00152FA0 /* Sources */,
+				396A3C97291B210B00152FA0 /* Frameworks */,
+				396A3C98291B210B00152FA0 /* Resources */,
+				7BC54088BCED713DEFC12D1F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyTrader;
+			packageProductDependencies = (
+			);
+			productName = EasyTrader;
+			productReference = 396A3C9A291B210B00152FA0 /* EasyTrader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		396A3C92291B210B00152FA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					396A3C99291B210B00152FA0 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 396A3C95291B210B00152FA0 /* Build configuration list for PBXProject "EasyTrader" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 396A3C91291B210B00152FA0;
+			packageReferences = (
+			);
+			productRefGroup = 396A3C9B291B210B00152FA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				396A3C99291B210B00152FA0 /* EasyTrader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		396A3C98291B210B00152FA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				396A3CA5291B210C00152FA0 /* Preview Assets.xcassets in Resources */,
+				39D5F5CE292AF42C0021150B /* GoogleService-Info.plist in Resources */,
+				396A3CA2291B210C00152FA0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7BC54088BCED713DEFC12D1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyTrader/Pods-EasyTrader-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyTrader/Pods-EasyTrader-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyTrader/Pods-EasyTrader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E996DC2F0727F778A4070E75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyTrader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		396A3C96291B210B00152FA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39D5F5D0292B19740021150B /* AuthViewModel.swift in Sources */,
+				39363F6729495E5900EEDF81 /* UserModel.swift in Sources */,
+				397B1575297B100800E58DAE /* EmptyPortfolioRowView.swift in Sources */,
+				39E93F2D295A2DB6008B9949 /* ModifySelectedStockView.swift in Sources */,
+				39CCD30D29400DD1004E8F52 /* LogoView.swift in Sources */,
+				396A3CAD291B254500152FA0 /* LogInView.swift in Sources */,
+				397E75AB296B57F2005EB4DA /* TransactionsView.swift in Sources */,
+				397B156C2979B56D00E58DAE /* PortfolioItemRowView.swift in Sources */,
+				39B770D529214C6400DAB982 /* BuyView.swift in Sources */,
+				3907B14A2973608800B8A0A8 /* Double.swift in Sources */,
+				39CCD2FD293CE125004E8F52 /* SideMenuRowView.swift in Sources */,
+				397E75A9296B523A005EB4DA /* TransactionRowView.swift in Sources */,
+				39B9FB742948075C008B583E /* MainView.swift in Sources */,
+				39CCD2FB293CE111004E8F52 /* SideMenuView.swift in Sources */,
+				39CCD30B29400A7F004E8F52 /* CustomInputField.swift in Sources */,
+				39DD5156296A345700B5CC5B /* OwnedCoinRowView.swift in Sources */,
+				397AE15C2951490200ACFD23 /* CoinService.swift in Sources */,
+				397AE1642952951B00ACFD23 /* CoinModel.swift in Sources */,
+				396A3CAF291B3C3E00152FA0 /* RegisterView.swift in Sources */,
+				3907B14C297461D700B8A0A8 /* ModifyCoinViewModel.swift in Sources */,
+				39CCD2F6293BC462004E8F52 /* ProfileView.swift in Sources */,
+				397B15682979AFC800E58DAE /* PortfolioView.swift in Sources */,
+				39DD51522969C22D00B5CC5B /* OwnedCoinModel.swift in Sources */,
+				39B770D72921BADF00DAB982 /* DashboardView.swift in Sources */,
+				39CCD305293CEB0E004E8F52 /* StackedContentView.swift in Sources */,
+				39426CA629245D590099A830 /* SellView.swift in Sources */,
+				396A3CA0291B210B00152FA0 /* ContentView.swift in Sources */,
+				396A3C9E291B210B00152FA0 /* EasyTraderApp.swift in Sources */,
+				397AE15A295145A400ACFD23 /* SearchBar.swift in Sources */,
+				39CCD2F3293BB787004E8F52 /* CoinRowView.swift in Sources */,
+				397AE15829512FEA00ACFD23 /* OwnedCoinsView.swift in Sources */,
+				39363F6529495C3500EEDF81 /* UserService.swift in Sources */,
+				397B156A2979B1F400E58DAE /* PortfolioData.swift in Sources */,
+				39CCD2FF293CE137004E8F52 /* SideMenuViewModel.swift in Sources */,
+				39DD51542969E12E00B5CC5B /* UserViewModel.swift in Sources */,
+				39CCD2F1293B9839004E8F52 /* MainTabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		396A3CA6291B210C00152FA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		396A3CA7291B210C00152FA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		396A3CA9291B210C00152FA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C965DA8737E2C6B5F2CFE06E /* Pods-EasyTrader.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EasyTrader/Preview Content\"";
+				DEVELOPMENT_TEAM = VYT8S6NWGF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.angelr.EasyTrader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		396A3CAA291B210C00152FA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88915881BCE5A55608C36305 /* Pods-EasyTrader.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EasyTrader/Preview Content\"";
+				DEVELOPMENT_TEAM = VYT8S6NWGF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.angelr.EasyTrader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		396A3C95291B210B00152FA0 /* Build configuration list for PBXProject "EasyTrader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				396A3CA6291B210C00152FA0 /* Debug */,
+				396A3CA7291B210C00152FA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		396A3CA8291B210C00152FA0 /* Build configuration list for PBXNativeTarget "EasyTrader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				396A3CA9291B210C00152FA0 /* Debug */,
+				396A3CAA291B210C00152FA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 396A3C92291B210B00152FA0 /* Project object */;
+}
