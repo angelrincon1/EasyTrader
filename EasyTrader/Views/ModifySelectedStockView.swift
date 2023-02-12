@@ -16,11 +16,11 @@ struct ModifySelectedStockView: View {
     @State var action: String = ""
     @State var coin: CoinModel?
     @State var transactionTotal = 0.0
-    @State var showAlert: Bool = false
-    @State var alertText: String = ""
+//    @State var showAlert: Bool = false
+//    @State var alertText: String = ""
     
-    @ObservedObject var viewModel = CoinService()
-    @ObservedObject var AuthModel = AuthViewModel()
+    @ObservedObject var coinService = CoinService()
+    @ObservedObject var viewModel = ModifyCoinViewModel()
     
     @Environment(\.dismiss) var dismiss
         
@@ -67,151 +67,8 @@ struct ModifySelectedStockView: View {
                 
                 Button {
                     
-                    if amountOfCoins > 0 {
-                        
-                        //MAKE SURE THAT COIN IS MODIFIED WITH THE CORRECT CURRENTPRICE
-                        viewModel.fetchSearchableCoin(searchText: (coin?.name.lowercased())!) {
-                            self.coin = viewModel.searchedCoin
-                        }
-                        
-                        let transactionAmount = coin!.currentPrice * Double(amountOfCoins)
-                        
-                        //ADD MORE DATA SO API DOESN;T GET CALLED AS MUCH
-                        let data = ["coinID": coin!.id,
-                                    "qty": amountOfCoins,
-                                    "date": Timestamp(date: Date())] as [String : Any]
-                        
-                        let transactionData = ["coinID": coin!.id,
-                                               "coinName": coin!.name,
-                                               "qty": amountOfCoins,
-                                               "date": Timestamp(date: Date()),
-                                               "price": coin!.currentPrice,
-                                               "action": action,
-                                               "image": coin!.image,
-                                               "symbol": coin!.symbol] as [String : Any]
-                        
-                        Firestore.firestore().collection("users").document((AuthModel.currentUser?.id)!).collection("coins").whereField("coinID", isEqualTo: coin!.id).getDocuments { snapshot, error in
-                            
-                            if let e = error {
-                                print(e.localizedDescription)
-                            }
-                            
-                            guard let snapshot = snapshot else { return }
-                            
-                            //MAKE SURE DOCUMENT EXISTS
-                            if snapshot.isEmpty {
-                                print("DOCUMENT DOES NOT EXIST")
-                                
-                                //Verify that user complies with modification requirements
-                                //(if buying, that user has enough funds, if selling, that user has enough stocks to sell)
-                                
-                                if action == "Buy" {
-                                    //Verify that user has enough cash
-                                    if AuthModel.currentUser!.cash > transactionAmount {
-                                        //User has enough cash, add stock and substract the money
-                                        Firestore.firestore().collection("users")
-                                            .document((AuthModel.currentUser?.id)!).collection("coins").document().setData(data) { _ in
-                                                print("STOCK ADDED TO DATABASE")
-                                                //CHARGE USER FOR PURCHASE
-                                                let newBalance = AuthModel.currentUser!.cash - transactionAmount
-                                                Firestore.firestore().collection("users")
-                                                    .document((AuthModel.currentUser?.id)!).updateData(["cash":newBalance])
-                                                print("USER CHARGED")
-                                            }
-                                        //ADD TRANSACTION TO TRANSACTION HISTORY
-                                        Firestore.firestore().collection("users")
-                                            .document((AuthModel.currentUser?.id)!).collection("transactions").document().setData(transactionData) { _ in
-                                                print("Transaction registered in database")
-                                            }
-                                        //Show Success Alert
-                                        alertText = "Success! \n\n Your new coin was added to your portfolio."
-                                        showAlert.toggle()
-                                    }
-                                    else {
-                                        alertText = "Error \n\n Not enough funds to complete transaction."
-                                        showAlert.toggle()
-                                    }
-                                }
-                            }
-                            else {
-                                let ownedCoin = snapshot.documents.first?.data()
-                                print("DOCUMENT EXISTS, IT'S THE FOLLOWING \(ownedCoin!["coinID"]!)")
-                                
-                                if action == "Buy" {
-                                    //MAKE SURE USER HAS ENOUGH CASH TO BUY COINS
-                                    if AuthModel.currentUser!.cash > transactionAmount {
-                                        snapshot.documents.first?.reference.updateData(["qty":ownedCoin!["qty"]! as! Int + amountOfCoins])
-                                        //CHARGE USER FOR PURCHASE
-                                        let newBalance = AuthModel.currentUser!.cash - transactionAmount
-                                        Firestore.firestore().collection("users")
-                                            .document((AuthModel.currentUser?.id)!).updateData(["cash":newBalance])
-                                        print("USER CHARGED")
-                                        //ADD TRANSACTION TO TRANSACTION HISTORY
-                                        Firestore.firestore().collection("users")
-                                            .document((AuthModel.currentUser?.id)!).collection("transactions").document().setData(transactionData) { _ in
-                                                print("Transaction registered in database")
-                                            }
-                                        //Show Success Alert
-                                        alertText = "Success! \n\n Coin added to your portfolio."
-                                        showAlert.toggle()
-                                    }
-                                    else {
-                                        alertText = "Error \n\n Not enough funds to complete transaction."
-                                        showAlert.toggle()
-                                    }
-                                }
-                                else {
-                                    //MAKE SURE USER HAS ENOUGH COINS TO SELL
-                                    let finalValue = ownedCoin!["qty"] as! Int - amountOfCoins
-                                    let newBalance = AuthModel.currentUser!.cash + transactionAmount
-                                    
-                                    if finalValue < 0 {
-                                        //Show Alert
-                                        alertText = "Error \n\n Not enough coins owned."
-                                        showAlert.toggle()
-                                    }
-                                    else if finalValue == 0 {
-                                        //FUND USER FOR SALE
-                                        Firestore.firestore().collection("users")
-                                            .document((AuthModel.currentUser?.id)!).updateData(["cash":newBalance])
-                                        print("USER FUNDED")
-                                        //ADD TRANSACTION TO TRANSACTION HISTORY
-                                        Firestore.firestore().collection("users")
-                                            .document((AuthModel.currentUser?.id)!).collection("transactions").document().setData(transactionData) { _ in
-                                                print("Transaction registered in database")
-                                            }
-                                        //DELETE COIN DOCUMENT IF THERE ISN'T ANY LEFT
-                                        snapshot.documents.first?.reference.delete()
-                                        
-                                        //Show success alert
-                                        alertText = "Success! \n\n Coins sold."
-                                        showAlert.toggle()
-                                    }
-                                    else {
-                                        //FUND USER FOR SALE
-                                        Firestore.firestore().collection("users")
-                                            .document((AuthModel.currentUser?.id)!).updateData(["cash":newBalance])
-                                        print("USER FUNDED")
-                                        //SUBSTRACT COINS SOLD
-                                        snapshot.documents.first?.reference.updateData(["qty":ownedCoin!["qty"]! as! Int - amountOfCoins])
-                                        //ADD TRANSACTION TO TRANSACTION HISTORY
-                                        Firestore.firestore().collection("users")
-                                            .document((AuthModel.currentUser?.id)!).collection("transactions").document().setData(transactionData) { _ in
-                                                print("Transaction registered in database")
-                                            }
-                                        
-                                        //Show success alert
-                                        alertText = "Success! \n\n Coins sold."
-                                        showAlert.toggle()
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    else {
-                        //Show success alert
-                        alertText = "Error \n\n Select a valid amount of coins."
-                        showAlert.toggle()
+                    coinService.fetchSearchableCoin(searchText: coin!.id.lowercased()) { coin in
+                        viewModel.executeTransaction(withCoin: coin, withAction: action, withQTY: amountOfCoins)
                     }
                     
                 } label: {
@@ -227,8 +84,8 @@ struct ModifySelectedStockView: View {
             }
             
         }
-        .alert(isPresented: $showAlert) {
-            Alert(title: Text(alertText),
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(title: Text(viewModel.alertText),
                   dismissButton: .default(
                     Text("Dismiss"),
                     action: {

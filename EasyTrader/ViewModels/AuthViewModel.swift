@@ -60,7 +60,6 @@ class AuthViewModel: ObservableObject {
                 .document(user.uid)
                 .setData(data) { _ in
                     self.fetchUser()
-                    print("DEBUG: did upload user data")
                 }
         }
     }

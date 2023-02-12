@@ -88,7 +88,7 @@ class CoinService: ObservableObject {
     }
     
     //fetch specific coin to update info when buying/selling
-    func fetchSearchableCoin(searchText: String, completion: @escaping () -> Void) {
+    func fetchSearchableCoin(searchText: String, completion: @escaping (CoinModel) -> Void) {
         let urlSearchString = "https://api.coingecko.com/api/v3/coins/\(searchText)?localization=false"
         
         Alamofire.request(urlSearchString, method: .get).responseJSON { response in
@@ -98,7 +98,10 @@ class CoinService: ObservableObject {
                                 
                 self.searchedCoin = CoinModel(image: json["image"]["small"].stringValue, id: json["id"].stringValue, priceChangePercentage24HInCurrency: json["market_data"]["price_change_percentage_24h_in_currency"]["usd"].doubleValue, currentPrice: json["market_data"]["current_price"]["usd"].doubleValue, symbol: json["symbol"].stringValue.uppercased(), priceChangePercentage24H: json["market_data"]["price_change_percentage_24h"].doubleValue, name: json["name"].stringValue, marketCap: json["market_data"]["market_cap"]["usd"].doubleValue, priceChange24H: json["market_data"]["price_change_24h"].doubleValue)
                 
-                completion()
+                
+                
+                
+                completion(self.searchedCoin!)
             }
         }
     }
