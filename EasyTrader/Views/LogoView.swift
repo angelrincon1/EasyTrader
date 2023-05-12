@@ -21,7 +21,7 @@ struct LogoView: View {
                 .scaledToFit()
                 .foregroundColor(.black)
 //                .background(Color.black)
-            
+                    
             Text("EasyTrader")
                 .font(.system(size: textFont))
                 .fontWeight(.heavy)

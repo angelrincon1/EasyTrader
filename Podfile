@@ -9,9 +9,9 @@ target 'EasyTrader' do
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
   pod 'FirebaseFirestoreSwift'
-  pod 'Alamofire'
+  pod 'Alamofire', "~> 4.9.1"
   pod 'SwiftyJSON'
-  pod 'Kingfisher', '~> 7.0'
+  pod 'Kingfisher'
 	
 
 end

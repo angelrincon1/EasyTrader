@@ -74,7 +74,6 @@ struct LogInView: View {
                         }
                         .padding(.top, UIScreen.main.bounds.height * 0.36)
                         
-                        
                     }
                 }
                 //end of scroll view
